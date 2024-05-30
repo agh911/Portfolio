@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Avatar from "../assets/Avatar.png";
 import About from "../assets/About.png";
 import { createMessage } from '../../utils/dataService.js';

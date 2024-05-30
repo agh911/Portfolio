@@ -10,6 +10,8 @@ export default function Home({ user, skills, projects, isDarkMode }) {
         subject: '',
         content: ''
     });
+    const [showSuccessIcon, setShowSuccessIcon] = useState(false);
+    const [showFailIcon, setShowFailIcon] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -23,8 +25,22 @@ export default function Home({ user, skills, projects, isDarkMode }) {
         try {
             await createMessage(formData);
             console.log('Message sent successfully');
+            setShowSuccessIcon(true);
+            setTimeout(() => {
+                setShowSuccessIcon(false);
+            }, 3000);
+            setFormData({
+                name: '',
+                email: '',
+                subject: '',
+                content: ''
+            });
         } catch (error) {
             console.error('Error sending message:', error);
+            setShowFailIcon(true);
+            setTimeout(() => {
+                setShowFailIcon(false);
+            }, 3000);
         }
     };
 
@@ -166,7 +182,11 @@ export default function Home({ user, skills, projects, isDarkMode }) {
                             <div className="sm:col-span-2">
                                 <textarea id="content" value={formData.content} onChange={handleChange} rows="6" className="block p-2.5 w-full text-sm text-paragraph bg-customBg rounded-sm shadow-sm border border-white-100 focus:bg-card focus:ring-primary-500 focus:border-btnCol" placeholder="Leave your message..."></textarea>
                             </div>
-                            <button type="submit" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center bg-btnCol text-btnText rounded-sm transition ease-in-out duration-500 hover:bg-btnHov">Send message</button>
+                            <div className="flex">
+                                <button type="submit" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center bg-btnCol text-btnText rounded-sm transition ease-in-out duration-500 hover:bg-btnHov">Send message</button>
+                                {showSuccessIcon && <img src="https://cdn-icons-png.flaticon.com/128/2593/2593550.png" alt="Success" className="ml-5 w-9 h-9" />}
+                                {showFailIcon && <img src="https://cdn-icons-png.flaticon.com/128/2593/2593666.png" alt="Fail" className="ml-5 w-9 h-9" />}
+                            </div>
                         </form>
                     </div>
                     <div className="lg:mt-0 lg:col-span-6 lg:mt-0 sm:mt-20">

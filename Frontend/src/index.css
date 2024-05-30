@@ -1,0 +1,54 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/natural-precision');
+
+/* Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.np-font {
+  font-family: 'Natural Precision', sans-serif;
+}
+
+.light {
+  --background: 255, 255, 254;
+  --headline: 43, 44, 52;
+  --paragraph: 43, 44, 52;
+  --btn: 47, 121, 175;
+  --btnHov: 63, 145, 203;
+  --btnText: 255, 255, 254;
+  --card: 239, 240, 243;
+  --cardHov: 216, 238, 254;
+  --badge: 177, 209, 248;
+  --badgeText: 30, 66, 159;
+  --gradient: radial-gradient(circle, rgba(47, 92, 175, 0.2) 25%, rgba(47, 92, 175, 0) 70%);
+}
+
+.dark {
+  --background: 22, 22, 26;
+  --headline: 255, 255, 254;
+  --paragraph: 148, 161, 178;
+  --btn: 127, 90, 240;
+  --btnHov: 168, 132, 255;
+  --btnText: 255, 255, 254;
+  --card: 35, 38, 41;
+  --cardHov: 56, 60, 66;
+  --badge: 223, 231, 255;
+  --badgeText: 66, 56, 157;
+  --gradient: radial-gradient(circle, rgba(126, 90, 240, 0.2) 0%, rgba(126, 90, 240, 0) 70%);
+}

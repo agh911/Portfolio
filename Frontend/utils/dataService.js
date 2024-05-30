@@ -29,3 +29,12 @@ export const getSkillsData = async () => {
         return error;
     }
 };
+
+export const createMessage = async ({ name, email, subject, content }) => {
+    try {
+        const response = await axios.post(`${API_BASE_URL}/messages`, { name, email, subject, content });
+        return response.data;
+    } catch (error) {
+        throw error;
+    }
+};

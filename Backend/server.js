@@ -15,6 +15,7 @@ const host = process.env.HOST;
 import { getUserDataRoute } from "./routes/userData.route.js";
 import { getProjectsDataRoute } from "./routes/projectsData.route.js";
 import { getSkillsDataRoute } from "./routes/skillsData.route.js";
+import { createMessageRoute } from "./routes/message.route.js";
 
 const databaseConnect = async () => {
     console.log("connecting to mongo...");
@@ -30,6 +31,7 @@ app.use(express.json());
 app.use("/", getUserDataRoute);
 app.use("/", getProjectsDataRoute);
 app.use("/", getSkillsDataRoute);
+app.use("/", createMessageRoute);
 
 const SERVER = app.listen(port, host, () => {
     console.log(`Server running on https://${host}:${port}`);

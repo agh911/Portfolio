@@ -50,7 +50,7 @@ export default function Home({ user, skills, projects, isDarkMode }) {
                 <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
                     <div className="mr-auto place-self-center lg:col-span-7">
                         <p className="np-font text-lg leading-8 text-headline">Hi, my name is</p>
-                        <h1 className="my-4 text-4xl font-bold tracking-tight text-headline lg:text-6xl">{user?.name}.</h1>
+                        <h1 className="my-4 text-4xl font-bold tracking-tight text-headline lg:text-6xl">{user?.name}</h1>
                         <h1 className="text-4xl font-bold tracking-tight text-headline mb-4 lg:text-5xl lg:text-3xl">Junior Software Engineer</h1>
                         <p className="text-paragraph">{user.bio}</p>
                         <div>

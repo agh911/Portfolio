@@ -24,7 +24,7 @@ const GradientCursor = () => {
 
     return (
         <div
-            className="bg-gradient pointer-events-none fixed inset-0 z-30 rounded-full transition duration-300 lg:absolute sm:absolute"
+            className="bg-gradient pointer-events-none fixed inset-0 z-30 rounded-full transition duration-300 lg:absolute"
             style={{
                 width: '700px',
                 height: '700px',

@@ -53,3 +53,24 @@
   --badgeText: 66, 56, 157;
   --gradient: radial-gradient(circle, rgba(126, 90, 240, 0.2) 0%, rgba(126, 90, 240, 0) 70%);
 }
+
+/* Targeting the entire scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #f1f1f1;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #c4baba;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #6d78b1;
+}

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer({ isDarkMode }) {
     return (
-        <footer className={`${isDarkMode ? 'dark' : 'light'} bg-customBg pb-15 rounded-sm`}>
+        <footer className={`${isDarkMode ? 'dark' : 'light'} bg-customBg pb-15`}>
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <span className="self-center text-headline text-2xl font-semibold whitespace-nowrap np-font">AG</span>

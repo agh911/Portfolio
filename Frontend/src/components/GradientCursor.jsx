@@ -6,7 +6,9 @@ const GradientCursor = () => {
 
     useEffect(() => {
         const updateCursorPosition = (e) => {
-            setCursorPosition({ x: e.clientX, y: e.clientY });
+            const maxY = window.innerHeight - 350;
+            const y = Math.min(e.clientY, maxY);
+            setCursorPosition({ x: e.clientX, y });
         };
 
         const updateScrollPosition = () => {
